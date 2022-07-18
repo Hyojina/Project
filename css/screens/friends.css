@@ -25,7 +25,6 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* Channel이 너무 연해서 따로 투명도 조정 */
 .friends-screen__channel-header span {
   color: var(--gray-text);
 }

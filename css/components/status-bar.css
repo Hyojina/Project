@@ -1,16 +1,18 @@
 .status-bar {
   display: flex;
-  justify-content: center; /*No Service부분이 길어서 space-between으로 하면 시간이 가운데로 안옴!*/
+  /*No Service부분이 길어서 space-between으로 하면 시간이 가운데로 안옴!*/
   padding: 10px 12px;
   font-size: 16px;
-  /* position: fixed; */
+  position: static;
   width: 100%;
+  justify-content: space-between;
   box-sizing: border-box;
   color: black;
 }
 
 .status-bar__column {
-  width: 33%;
+  width: 100%;
+  position: fixed;
 }
 
 .status-bar__column:first-child span {

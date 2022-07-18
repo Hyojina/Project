@@ -1,0 +1,35 @@
+.alt-header {
+  margin: var(--horizontal-space);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.alt-header__title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.alt-header__column:first-child {
+  position: absolute;
+  left: 0px;
+}
+
+.alt-header__column:nth-child(2) {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alt-header__column:nth-child(3) {
+  position: absolute;
+  right: 50px;
+}
+
+.alt-header__column:nth-child(3) .fa-magnifying-glass {
+  margin: 20px;
+}

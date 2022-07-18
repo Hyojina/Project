@@ -1,31 +1,3 @@
-.find-icons {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0px;
-}
-
-.find_icons__icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* 내가 추가함 */
-  width: 20%;
-  text-align: center;
-}
-
-.find_icons__icon i {
-  /* 아이콘 크기를 font-size로 조절 가능 */
-  font-size: 40px;
-  height: 50px;
-}
-
-.find_icons__icon span {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  font-size: 18px;
-}
-
 .recommended-friends {
   border-top: var(--main-border);
   border-bottom: var(--main-border);
@@ -61,13 +33,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0px;
+}
+
+.open-post:last-child {
+  border-top: var(--main-border);
 }
 
 .open-post__column:first-child {
-  height: 80px;
+  height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .open-post__title {
@@ -75,7 +52,7 @@
   font-size: 20px;
 }
 
-.open-post__hashtags {
+.open-post__hashtags-uppercase {
   /* 모든 글자를 대문자로 만들기 */
   text-transform: uppercase;
   color: var(--gray-text);

@@ -1,0 +1,80 @@
+.nav {
+  background-color: #f9f9fa;
+  padding: 25px 0px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0px;
+  width: 100%; /*스크린 가로의 100%를 차지*/
+
+  /* box-sizing: border-box;  */
+  /* box사이즈를 늘리지 말아달라고 하는것. 이는 padding의 width가 있을 경우 의미가 있는데, 지금은 의미없다~!*/
+  /* padding을 주고 싶은데, box사이즈는 그대로이길 바랄때!*/
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__link {
+  position: relative;
+}
+
+/*변경 전: space-between, box-sizing:border-box, padding(좌우):20px*/
+/*변경 후: space-around, [삭제]box-sizing:border-box, [삭제]padding(좌우):20px*/
+
+/* 숫자 떴을때 위치옮기는것만! */
+/* 디자인은 badge.css에 있음 */
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification__num {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+.nav__notification__dot {
+  position: absolute;
+  left: 30px;
+  bottom: 28px;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__btn {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: appearBtnAnimation 300ms ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.nav__btn:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.nav__btn:nth-child(4) {
+  animation-delay: 400ms;
+}

@@ -1,0 +1,38 @@
+.status-bar {
+  display: flex;
+  /*No Service부분이 길어서 space-between으로 하면 시간이 가운데로 안옴!*/
+  padding: 10px 12px;
+  font-size: 16px;
+  position: static;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: black;
+}
+
+.status-bar__column {
+  width: 100%;
+  position: fixed;
+}
+
+.status-bar__column:first-child span {
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 600;
+}
+
+.status-bar__column .fa-battery-quarter {
+  margin: 0px 5px;
+}

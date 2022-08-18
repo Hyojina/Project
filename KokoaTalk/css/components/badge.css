@@ -1,0 +1,20 @@
+.badge_num {
+  background-color: tomato;
+  width: 26px;
+  height: 26px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex; /*span이기 때문에 width, height 적용하려면 block으로 만들어줘야 한다.*/
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.badge_dot {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 15px;
+  display: flex;
+}

@@ -1,0 +1,58 @@
+.welcome-header {
+  display: flex;
+  margin: 135px 0px 105px 0px;
+  text-align: center; /*이게 있어야 가운데 정렬 효과를 낼 수 있다. 안하면 줄바뀌고 맨앞에 맞추게됨!*/
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.welcome-header__text {
+  width: 80%;
+  color: var(--gray-text);
+  font-size: 18px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 40px;
+}
+
+#login-form input {
+  padding: 40px 0px;
+  font-size: 20px;
+  border: none;
+}
+
+#login-form input:not([type="submit"]) {
+  border-bottom: var(--main-border);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: var(--gray-text);
+}
+
+#login-form input[type="submit"] {
+  margin: 55px 0px 40px 0px;
+  padding: 30px 0px;
+  background-color: var(--yellow);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form a {
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.8); /* color: inherit 해도 됨 */
+  font-size: 16px;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 스타일 -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
@@ -16,15 +17,23 @@
     />
     <link rel="icon" type="image" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./main.css" />
+    <!-- js -->
     <script defer src="./main.js"></script>
-    <title>Document</title>
+    <title>영화 찾아 삼만리</title>
   </head>
   <body>
+    <!-- 상단바 -->
+    <header>
+      <div class="menu">
+        <a href="./index.html"> <div class="menu__search">영화 찾기</div></a>
+        <a href="./info.html"> <div class="menu__maker">만든사람 보기</div></a>
+      </div>
+    </header>
     <div class="container">
       <div class="title">
         <div class="title__top">
-          <a href="./"><div></div></a>
-          <a href="./"><h1>영화 찾아 삼만리</h1></a>
+          <a href=""><div></div></a>
+          <a href=""><h1>영화 찾아 삼만리</h1></a>
         </div>
         <p>
           찾고싶은 영화가 있으신가요? <br />영화를 찾아 삼만리를 떠나봅시다..
@@ -50,7 +59,7 @@
           <input
             class="search__text"
             type="text"
-            placeholder="검색하실 키워드를 적어주세요. 영어 필수!!"
+            placeholder="키워드를 입력하세요. (3글자 이상! 영어 필수!)"
           />
         </section>
         <section class="right">
@@ -58,8 +67,8 @@
         </section>
       </div>
       <div class="result">
-        <img class="result__load" />
         <div class="result__movies"></div>
+        <img class="result__load" />
       </div>
       <div class="actions">
         <div class="btn hidden">더 찾아 헤매기</div>

@@ -16,6 +16,7 @@
     op.innerText = `${i}`;
     sYearEl.append(op);
   }
+  localStorage.clear();
 
   /* 이벤트 리스너 */
   // 1.검색 버튼
@@ -97,9 +98,12 @@
       else imgEl.src = movie.Poster;
 
       el.append(imgEl, h1El);
-      el.addEventListener("click", () => {
-        console.log(movie.Title);
-      });
+      // el.addEventListener("click", () => {
+      //   localStorage.setItem("poster", movie.Poster);
+      //   localStorage.setItem("title", movie.Title);
+      //   localStorage.setItem("type", movie.Type);
+      //   localStorage.setItem("year", movie.Year);
+      // });
 
       rMovieEl.append(el);
     }

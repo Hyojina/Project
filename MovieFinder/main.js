@@ -2,6 +2,8 @@
   /* 초기화 */
   const rMovieEl = document.querySelector(".result__movies");
   const rLoadEl = document.querySelector(".result__load");
+  const rShortEl = document.querySelector(".result__short");
+  const rNotEl = document.querySelector(".result__nothing");
   const moreBtnEl = document.querySelector(".btn");
   const sKeywordEl = document.querySelector(".search__text");
   const sTypeEl = document.querySelector(".search__type");
@@ -27,8 +29,10 @@
   });
   // 3.더보기 버튼
   moreBtnEl.addEventListener("click", async () => {
+    rLoadEl.classList.remove("hidden");
     const movies = await getMovies();
     renderMovies(movies);
+    rLoadEl.classList.add("hidden");
   });
 
   /* 함수 목록*/
@@ -37,10 +41,13 @@
     clearMovies();
 
     rLoadEl.classList.remove("hidden");
+    rShortEl.classList.add("hidden");
+    rNotEl.classList.add("hidden");
 
     const keyword = sKeywordEl.value;
     if (keyword.length < 3) {
-      rLoadEl.src = "./images/text_more.png";
+      rLoadEl.classList.add("hidden");
+      rShortEl.classList.remove("hidden");
       return;
     }
 
@@ -54,7 +61,8 @@
         moreBtnEl.classList.add("hidden");
         break;
       } else {
-        rLoadEl.src = "./images/text_nothing.png";
+        rLoadEl.classList.add("hidden");
+        rNotEl.classList.remove("hidden");
         return;
       }
     }
@@ -63,8 +71,6 @@
 
   // 2.영화 정보 가져오기
   async function getMovies() {
-    rLoadEl.src = "./images/text_search.gif";
-
     const type = sTypeEl.options[sTypeEl.selectedIndex].value;
     const year = sYearEl.options[sYearEl.selectedIndex].value;
 
@@ -74,7 +80,6 @@
     page++;
     const result = await res.json();
 
-    console.log(result);
     if (result.Response === "False") return false;
 
     if (result.Search.length !== 10) {
